@@ -1,0 +1,13 @@
+{
+  "jobs": [
+    {"id": 1001, "title": "Software Engineer I", "updated_at": "2026-11-10T10:00:00-05:00",
+     "first_published": "2026-11-01T09:00:00-05:00",
+     "location": {"name": "Bangalore, India"}, "absolute_url": "https://boards.greenhouse.io/acme/jobs/1001?gh_src=abc",
+     "content": "&lt;p&gt;Join our &lt;strong&gt;platform&lt;/strong&gt; team. 0-1 years.&lt;/p&gt;",
+     "offices": [{"name": "Bangalore", "location": "Bengaluru, Karnataka, India"}], "metadata": null},
+    {"id": 1002, "title": "Account Executive", "updated_at": "2026-11-10T10:00:00-05:00",
+     "location": {"name": "San Francisco, CA"}, "absolute_url": "https://boards.greenhouse.io/acme/jobs/1002",
+     "content": "&lt;p&gt;Sales role&lt;/p&gt;", "offices": [], "metadata": null}
+  ],
+  "meta": {"total": 2}
+}

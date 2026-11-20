@@ -1,0 +1,10 @@
+[
+  {"id": "aaa-111", "text": "Data Analyst Intern", "hostedUrl": "https://jobs.lever.co/beta/aaa-111",
+   "applyUrl": "https://jobs.lever.co/beta/aaa-111/apply", "createdAt": 1762000000000,
+   "categories": {"commitment": "Internship", "location": "Pune", "team": "Analytics", "allLocations": ["Pune", "Remote"]},
+   "country": "IN", "workplaceType": "hybrid", "descriptionPlain": "Work with SQL and dashboards.",
+   "lists": [{"text": "Requirements", "content": "<li>SQL</li><li>Excel</li>"}], "additionalPlain": ""},
+  {"id": "bbb-222", "text": "Backend Engineer", "hostedUrl": "https://jobs.lever.co/beta/bbb-222",
+   "createdAt": 1762000000000, "categories": {"location": "London"}, "country": "GB",
+   "workplaceType": "onsite", "descriptionPlain": "Go services."}
+]

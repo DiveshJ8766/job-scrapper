@@ -1,0 +1,9 @@
+{"count": 2, "results": [
+  {"id": "4100000001", "title": "Junior <strong>Frontend</strong> Developer", "company": {"display_name": "Delta Tech Pvt Ltd"},
+   "location": {"display_name": "Bangalore, Karnataka", "area": ["India", "Karnataka", "Bangalore"]},
+   "description": "React developer needed for fresher role...", "redirect_url": "https://www.adzuna.in/jobs/land/ad/4100000001?se=x&v=y",
+   "created": "2026-11-15T08:00:00Z", "contract_time": "full_time", "contract_type": "permanent",
+   "category": {"label": "IT Jobs"}},
+  {"id": "4100000002", "title": "Mystery role", "company": {}, "location": {"display_name": "India"},
+   "description": "", "redirect_url": "https://www.adzuna.in/jobs/land/ad/4100000002", "created": "2026-11-15T08:00:00Z"}
+]}

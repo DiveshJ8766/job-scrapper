@@ -1,0 +1,26 @@
+name: Probe company boards
+
+# Manual helper: lists which configured Greenhouse/Lever/Ashby boards exist and how many
+# India jobs each has. Writes nothing to the database.
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      DATABASE_URL: "postgresql://unused"   # probe never connects; settings require a value
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements.txt
+      - run: python -m pipeline.probe | tee probe.txt
+      - if: always()
+        run: |
+          { echo '```'; cat probe.txt; echo '```'; } >> "$GITHUB_STEP_SUMMARY"
