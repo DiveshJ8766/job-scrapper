@@ -22,7 +22,7 @@ postings from public job APIs, removes duplicates, uses an LLM to label each pos
 | Part | State |
 |---|---|
 | Schema, migrations, deduplication, idempotent upserts | Built; tested against real Postgres |
-| Source adapters (Adzuna, Greenhouse, Lever, Ashby) | Built; tested with fixtures in each API's documented shape. **Not yet run against the live APIs** |
+| Source adapters (Adzuna, Greenhouse, Lever, Ashby) | Built and fixture-tested. ATS adapters **verified live** on GitHub Actions on 2026-11-20: 24 boards, 957 India jobs. Adzuna is untested until its key is added |
 | LLM classification, validation, retries, cost logging | Built; tested with a mocked provider. **Not yet run against a live LLM** |
 | API routes and UI | Built; tested end to end on a local Postgres |
 | GitHub Actions (daily, manual, CI) | Written and YAML-validated; **runs once secrets are added** |
@@ -94,8 +94,7 @@ The `Daily job refresh` workflow runs at 06:47 IST every day. It applies migrati
 own, so the first run also creates the tables.
 
 ### 4. First real run
-1. Actions → **Probe company boards** → Run workflow. Note which boards return `404` or 0 India
-   jobs and prune `pipeline/sources.json`.
+1. (Optional) Actions → **Probe company boards** → Run workflow to re-check the board list.
 2. Actions → **Daily job refresh** → Run workflow. Check the job summary (fetched / inserted /
    duplicates / classified) and that `/` shows 200+ jobs.
 3. Open `/admin` to see run status and LLM cost.
@@ -116,7 +115,7 @@ Invalid parameters return `400` with details. GET responses are cached at the ed
 
 ## Known limitations
 
-- **Company board list not yet verified live.** See DATA_SOURCES.md. The probe workflow fixes this in one run.
+- **Company boards are a curated list** (24 verified on 2026-11-20). Coverage depends on which employers use Greenhouse/Lever/Ashby. Re-run the probe to keep it current.
 - **Adzuna snippets.** About 500-character descriptions give the LLM less context. Adzuna links
   go through an Adzuna redirect, not the employer's page.
 - **Free-tier LLM rate limits.** With `LLM_MAX_RPM=12`, one run classifies up to about 700 jobs an

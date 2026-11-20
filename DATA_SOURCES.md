@@ -32,11 +32,11 @@ retry 429/5xx at most 3 times with backoff, and honour `Retry-After`.
 - These are the employers' own public job boards, read through the documented read-only APIs
   their career pages use. Links point straight at the employer's posting.
 - Only India-based postings are kept (location mentions India or an Indian city, or country = IN).
-- Company boards are listed in `sources.json`. **They were not verified from the build
-  environment** (it had no network access to these APIs). Run the "Probe company boards"
-  workflow (or `python -m pipeline.probe`) to see which tokens exist and how many India jobs
-  each has, then prune or extend the list. A board that doesn't exist shows up as `not_found`
-  and never fails a run.
+- Company boards are listed in `sources.json`. **Verified 2026-11-20** with the "Probe company boards"
+  workflow (GitHub Actions run 44749633192). 24 boards returned India jobs, **957 in total**, led by
+  Paytm (192), Okta (105), Zscaler (101), Databricks (77) and MongoDB (70). 18 candidate tokens
+  returned 404 or had no India jobs and were removed. Re-run the probe any time; a board that
+  disappears shows up as `not_found` and never fails a run.
 
 ### Considered and excluded
 | Source | Why excluded |

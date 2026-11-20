@@ -1,5 +1,5 @@
 {
-  "_comment": "Board tokens are candidates and were not verified from the build environment. Run `python -m pipeline.probe` to check which exist and how many India jobs each has; remove dead ones. A missing board (404) is reported as not_found and never stops the pipeline.",
+  "_comment": "Company boards verified with the 'Probe company boards' workflow on 2026-11-20 (GitHub Actions run 44749633192): every board listed returned HTTP 200 with at least one India job; 957 India jobs in total. Boards that returned 404 or 0 India jobs were removed. Re-run the probe to re-check; a missing board (404) is reported as not_found and never stops the pipeline.",
   "adzuna": {
     "enabled": true,
     "country": "in",
@@ -26,51 +26,105 @@
     ]
   },
   "greenhouse": [
-    {"token": "postman", "company": "Postman"},
-    {"token": "phonepe", "company": "PhonePe"},
-    {"token": "databricks", "company": "Databricks"},
-    {"token": "rubrik", "company": "Rubrik"},
-    {"token": "stripe", "company": "Stripe"},
-    {"token": "twilio", "company": "Twilio"},
-    {"token": "okta", "company": "Okta"},
-    {"token": "mongodb", "company": "MongoDB"},
-    {"token": "samsara", "company": "Samsara"},
-    {"token": "gitlab", "company": "GitLab"},
-    {"token": "thoughtspot", "company": "ThoughtSpot"},
-    {"token": "elastic", "company": "Elastic"},
-    {"token": "airbnb", "company": "Airbnb"},
-    {"token": "chargebee", "company": "Chargebee"},
-    {"token": "hackerrank", "company": "HackerRank"},
-    {"token": "groww", "company": "Groww"},
-    {"token": "browserstack", "company": "BrowserStack"},
-    {"token": "druva", "company": "Druva"},
-    {"token": "mindtickle", "company": "Mindtickle"},
-    {"token": "highradius", "company": "HighRadius"},
-    {"token": "coinbase", "company": "Coinbase"},
-    {"token": "cloudflare", "company": "Cloudflare"},
-    {"token": "newrelic", "company": "New Relic"},
-    {"token": "zscaler", "company": "Zscaler"}
+    {
+      "token": "databricks",
+      "company": "Databricks"
+    },
+    {
+      "token": "rubrik",
+      "company": "Rubrik"
+    },
+    {
+      "token": "stripe",
+      "company": "Stripe"
+    },
+    {
+      "token": "twilio",
+      "company": "Twilio"
+    },
+    {
+      "token": "okta",
+      "company": "Okta"
+    },
+    {
+      "token": "mongodb",
+      "company": "MongoDB"
+    },
+    {
+      "token": "samsara",
+      "company": "Samsara"
+    },
+    {
+      "token": "gitlab",
+      "company": "GitLab"
+    },
+    {
+      "token": "elastic",
+      "company": "Elastic"
+    },
+    {
+      "token": "airbnb",
+      "company": "Airbnb"
+    },
+    {
+      "token": "hackerrank",
+      "company": "HackerRank"
+    },
+    {
+      "token": "groww",
+      "company": "Groww"
+    },
+    {
+      "token": "druva",
+      "company": "Druva"
+    },
+    {
+      "token": "highradius",
+      "company": "HighRadius"
+    },
+    {
+      "token": "coinbase",
+      "company": "Coinbase"
+    },
+    {
+      "token": "cloudflare",
+      "company": "Cloudflare"
+    },
+    {
+      "token": "newrelic",
+      "company": "New Relic"
+    },
+    {
+      "token": "zscaler",
+      "company": "Zscaler"
+    }
   ],
   "lever": [
-    {"token": "cred", "company": "CRED"},
-    {"token": "meesho", "company": "Meesho"},
-    {"token": "zeta", "company": "Zeta"},
-    {"token": "paytm", "company": "Paytm"},
-    {"token": "upstox", "company": "Upstox"},
-    {"token": "jupiter", "company": "Jupiter"},
-    {"token": "smallcase", "company": "smallcase"},
-    {"token": "atlan", "company": "Atlan"},
-    {"token": "plum", "company": "Plum"},
-    {"token": "zepto", "company": "Zepto"},
-    {"token": "sprinklr", "company": "Sprinklr"},
-    {"token": "acko", "company": "ACKO"}
+    {
+      "token": "cred",
+      "company": "CRED"
+    },
+    {
+      "token": "meesho",
+      "company": "Meesho"
+    },
+    {
+      "token": "zeta",
+      "company": "Zeta"
+    },
+    {
+      "token": "paytm",
+      "company": "Paytm"
+    }
   ],
   "ashby": [
-    {"token": "rippling", "company": "Rippling"},
-    {"token": "sarvam", "company": "Sarvam AI"},
-    {"token": "deel", "company": "Deel"},
-    {"token": "confluent", "company": "Confluent"},
-    {"token": "notion", "company": "Notion"},
-    {"token": "razorpay", "company": "Razorpay"}
+    {
+      "token": "sarvam",
+      "company": "Sarvam AI"
+    },
+    {
+      "token": "notion",
+      "company": "Notion"
+    }
   ]
 }
